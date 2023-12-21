@@ -43,7 +43,7 @@ class AssessmentEmailService():
         business_name = data['businessdetails']['name'] if data['businessdetails']['name'] != "" else data['businessdetails']['trade_name']
         user = data['user']
         subject = 'Business Application Status'
-        message = 'Hello Mr/Ms %s %s, \n \n this is to inform you that your online application for %s has been checked and verified and is now subject for Assessment. You would receive periodic emails regarding the current status of your application. You can likewise check your application status here by logging in to boss.lipa.gov.ph. \n \n Thank you! \n City Government of Lipa	\n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'], business_name)
+        message = 'Hello Mr/Ms %s %s, \n \n this is to inform you that your online application for %s has been checked and verified and is now subject for Assessment. You would receive periodic emails regarding the current status of your application. You can likewise check your application status here by logging in to boss.lipa.gov.ph. \n \n Thank you! \n City Government of Lipa	\n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'], business_name)
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -54,7 +54,7 @@ class AssessmentEmailService():
         business_name = data['businessdetails']['name'] if data['businessdetails']['name'] != "" else data['businessdetails']['trade_name']
         user = data['user']
         subject = 'Business Application Status'
-        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for %s has been tagged as Incomplete. Kindly login to your account at lipa.onedoc.ph to check on your incomplete documents. From there you can update your application.  \n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'], business_name)
+        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for %s has been tagged as Incomplete. Kindly login to your account at lipa.onedoc.ph to check on your incomplete documents. From there you can update your application.  \n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'], business_name)
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -66,7 +66,7 @@ class AssessmentEmailService():
         user = data['user']
         department = self.get_department_object()
         subject = 'Business Application Status'
-        message = 'Hello Mr/Ms %s %s,\n \n This is to inform you that your online application for %s has been Approved by %s department. For further process we will send you an email notification about the current status of your application and also you can check your application here at lipa.onedoc.ph and login your account. \n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.'  % (user['first_name'], user['last_name'], business_name, department['name'])
+        message = 'Hello Mr/Ms %s %s,\n \n This is to inform you that your online application for %s has been Approved by %s department. For further process we will send you an email notification about the current status of your application and also you can check your application here at lipa.onedoc.ph and login your account. \n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.'  % (user['first_name'], user['last_name'], business_name, department['name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -78,7 +78,7 @@ class AssessmentEmailService():
         user = data['user']
         department = self.get_department_object()
         subject = 'Business Application Status'
-        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for %s has been Disapproved by %s department. Kindly login to at lipa.onedoc.ph to check the application comments. \n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'], business_name, department['name'])
+        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for %s has been Disapproved by %s department. Kindly login to at lipa.onedoc.ph to check the application comments. \n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'], business_name, department['name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -89,7 +89,7 @@ class AssessmentEmailService():
         business_name = data['businessdetails']['name'] if data['businessdetails']['name'] != "" else data['businessdetails']['trade_name']
         user = data['user']
         subject = 'Business Application Status'
-        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for %s is now ready for Payment. To check your Statement of Account (SOA), kindly login your account and go to Profile > Business and click Bill button\n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.'% (user['first_name'], user['last_name'], business_name)
+        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for %s is now ready for Payment. To check your Statement of Account (SOA), kindly login your account and go to Profile > Business and click Bill button\n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.'% (user['first_name'], user['last_name'], business_name)
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -100,7 +100,7 @@ class AssessmentEmailService():
         business_name = data['businessdetails']['name'] if data['businessdetails']['name'] != "" else data['businessdetails']['trade_name']
         user = data['user']
         subject = 'Business Application Status'
-        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for %s has been tagged as for Compliance. Kindly login to your account at lipa.onedoc.ph to check remarks and update your application there.\n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.'% (user['first_name'], user['last_name'], business_name)
+        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for %s has been tagged as for Compliance. Kindly login to your account at lipa.onedoc.ph to check remarks and update your application there.\n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.'% (user['first_name'], user['last_name'], business_name)
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -110,7 +110,7 @@ class AssessmentEmailService():
         data = self.get_building_object()
         user = data['user']
         subject = 'Building Application Status'
-        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online building application has been checked and verified. Your application is now subject for Inspection. Kindly expect further email updates regarding the status of your application. You can likewise login to lipa.onedoc.ph to verify your updated application status.\n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'])
+        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online building application has been checked and verified. Your application is now subject for Inspection. Kindly expect further email updates regarding the status of your application. You can likewise login to lipa.onedoc.ph to verify your updated application status.\n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -120,7 +120,7 @@ class AssessmentEmailService():
         data = self.get_building_object()
         user = data['user']
         subject = 'Building Application Status'
-        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online building application has been tagged as Incomplete.  Kindly login to lipa.onedoc.ph to to check on your incomplete documents. From there you can update your application. \n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'])
+        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online building application has been tagged as Incomplete.  Kindly login to lipa.onedoc.ph to to check on your incomplete documents. From there you can update your application. \n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -145,7 +145,7 @@ class AssessmentEmailService():
         data = self.get_building_object()
         user = data['user']
         subject = 'Building Application Status'
-        message = 'Hello Mr/Ms %s %s \n \n This is to inform you that your online building application is now ready for Evaluation. This will take 1 business day to evaluate your application. You can login to lipa.onedoc.ph to check the status of your application here.\n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'])
+        message = 'Hello Mr/Ms %s %s \n \n This is to inform you that your online building application is now ready for Evaluation. This will take 1 business day to evaluate your application. You can login to lipa.onedoc.ph to check the status of your application here.\n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -155,7 +155,7 @@ class AssessmentEmailService():
         data = self.get_building_object()
         user = data['user']
         subject = 'Building Application Status'
-        message = 'Hello Mr/Ms %s %s \n \n This is to inform you that your online building application is now ready for Assessment.You can login to lipa.onedoc.ph to check the status of your application here. \n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'])
+        message = 'Hello Mr/Ms %s %s \n \n This is to inform you that your online building application is now ready for Assessment.You can login to lipa.onedoc.ph to check the status of your application here. \n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
         send_mail(subject, message, from_email, to_email)
@@ -164,7 +164,7 @@ class AssessmentEmailService():
         data = self.get_building_object()
         user = data['user']
         subject = 'Building Application Status'
-        message = 'Hello Mr/Ms %s %s  \n \n This is to inform you that your online building application has been tagged as for Compliance. Kindly login to your account at lipa.onedoc.ph to check remarks and update your application there.\n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'])
+        message = 'Hello Mr/Ms %s %s  \n \n This is to inform you that your online building application has been tagged as for Compliance. Kindly login to your account at lipa.onedoc.ph to check remarks and update your application there.\n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -174,7 +174,7 @@ class AssessmentEmailService():
         data = self.get_building_object()
         user = data['user']
         subject = 'Building Application Status'
-        message = 'Hello Mr/Ms %s %s \n \n This is to inform you that your online building application is now ready for Payment. To check your Statement of Account (SOA), kindly login your account here at lipa.onedoc.ph and go to Profile > Building and click Bill button.\n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'])
+        message = 'Hello Mr/Ms %s %s \n \n This is to inform you that your online building application is now ready for Payment. To check your Statement of Account (SOA), kindly login your account here at lipa.onedoc.ph and go to Profile > Building and click Bill button.\n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -186,7 +186,7 @@ class AssessmentEmailService():
         user = data['user']
         td_no = data['buildingdetails']['tax_dec_no']
         subject = 'Business Application Status'
-        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for tax declaration no. %s has been Approved by %s. For further process we will send you an email notification about the current status of your application and also you can check your application here at lipa.onedoc.ph and login your account. \n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'], td_no, department['name'])
+        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for tax declaration no. %s has been Approved by %s. For further process we will send you an email notification about the current status of your application and also you can check your application here at lipa.onedoc.ph and login your account. \n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'], td_no, department['name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 
@@ -198,7 +198,7 @@ class AssessmentEmailService():
         user = data['user']
         td_no = data['buildingdetails']['tax_dec_no']
         subject = 'Business Application Status'
-        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for tax declaration no. %s has been Disapproved by %s department. kindly login to at lipa.onedoc.ph to check the application comments. \n \n Thank you! \n City Government of Lipa \n This is an auto-generated email. Please do not reply.' % (user['first_name'], user['last_name'], td_no, department['name'])
+        message = 'Hello Mr/Ms %s %s, \n \n This is to inform you that your online application for tax declaration no. %s has been Disapproved by %s department. kindly login to at lipa.onedoc.ph to check the application comments. \n \n Thank you! \n City Government of Lipa \n This email is unattended and is used only for notifications from the system.' % (user['first_name'], user['last_name'], td_no, department['name'])
         from_email = os.getenv('DEFAULT_FROM_EMAIL')
         to_email = [user['email']]
 

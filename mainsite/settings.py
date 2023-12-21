@@ -26,28 +26,13 @@ SECRET_KEY = 'xj)*4l980^s+n%t+@6_p*(^v(2b&o122j#v*zk6&3y(524%o6d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['boss-web-api.herokuapp.com','54.251.83.87', '54.179.237.200', 'bossapi.bacoor.gov.ph', '222.127.109.48', 'boss-web-api-v2.herokuapp.com', 'localhost', 'epaymentportal.landbank.com', 'api-checkout.pisopay.com.ph']
+#ALLOWED_HOSTS = ['localhost', 'epaymentportal.landbank.com', 'api-checkout.pisopay.com.ph']
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['lipaapi.onedoc.ph', '52.74.21.223']
 
 # Application definition
 from dotenv import load_dotenv
 load_dotenv()
-
-'''
-SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-
-# EMAIL_HOST = 'mail.bacoor.gov.ph'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-EMAIL_HOST_USER = os.getenv('BOSS_SMTP_USER')
-EMAIL_HOST_PASSWORD = os.getenv('BOSS_SMTP_PASSWORD')
-# EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = os.getenv('BOSS_SMTP_USER')
-'''
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -117,6 +102,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -128,6 +114,7 @@ DATABASES = {
     }
 }
 
+
 '''
 DATABASES = {
     'default': {
@@ -137,19 +124,6 @@ DATABASES = {
         'PASSWORD': 'admin1doc',
         'HOST': 'localhost',
         'PORT': '5432',
-    }
-}
-'''
-
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_bacoor2',
-        'USER': 'bacoor',
-        'PASSWORD': 'bacoor',
-        'HOST': 'db',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
     }
 }
 '''
