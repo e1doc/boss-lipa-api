@@ -22,6 +22,6 @@ class ActivateUser(UserViewSet):
 
         print("Working 2")
 
-        return redirect('https://lipa.onedoc.ph/login')
-        #return redirect('http://localhost:8080/login')
+        #return redirect('https://lipa.onedoc.ph/login')
+        return redirect('http://localhost:8080/login')
     

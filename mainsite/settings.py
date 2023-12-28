@@ -27,8 +27,8 @@ SECRET_KEY = 'xj)*4l980^s+n%t+@6_p*(^v(2b&o122j#v*zk6&3y(524%o6d'
 DEBUG = True
 
 #ALLOWED_HOSTS = ['localhost', 'epaymentportal.landbank.com', 'api-checkout.pisopay.com.ph']
-#ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['lipaapi.onedoc.ph', '52.74.21.223']
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['lipaapi.onedoc.ph', '52.74.21.223']
 
 # Application definition
 from dotenv import load_dotenv
@@ -102,7 +102,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -113,9 +113,8 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
-
 '''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -126,7 +125,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-'''
+
 
 AUTHENTICATION_BACKENDS = ['core.custom_auth.CaseInsensitiveModelBackend'] + [
     # other authentication backends
