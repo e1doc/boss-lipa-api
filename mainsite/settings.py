@@ -138,6 +138,10 @@ DJOSER= {
     'SEND_CONFIRMATION_EMAIL': True,
     'SEND_ACTIVATION_EMAIL': True,
     'ACTIVATION_URL': 'activate/{uid}/{token}',
+
+    'SERIALIZERS': {
+        'user_create': 'core.custom_auth.CustomUserCreateSerializer',
+    },
 }
 
 REST_FRAMEWORK = {

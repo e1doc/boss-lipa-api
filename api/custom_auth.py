@@ -12,16 +12,12 @@ class ActivateUser(UserViewSet):
  
         # this line is the only change from the base implementation.
         kwargs['data'] = {"uid": self.kwargs['uid'], "token": self.kwargs['token']}
- 
-        print("Working 1")
 
         return serializer_class(*args, **kwargs)
  
     def activation(self, request, uid, token, *args, **kwargs):
         response = super().activation(request, *args, **kwargs)
 
-        print("Working 2")
-
-        #return redirect('https://lipa.onedoc.ph/login')
-        return redirect('http://localhost:8080/login')
+        return redirect('https://lipa.onedoc.ph/login')
+        #return redirect('http://localhost:8080/login')
     

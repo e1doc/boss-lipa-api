@@ -9,7 +9,7 @@ class CustomModelChoiceField(forms.ModelChoiceField):
     def label_from_instance(self, obj):
         return "%s: %s" % (obj.application_type, obj.name)
 
-
+'''
 class User(AbstractUser):
     first_name = models.TextField(blank=False)
     last_name = models.TextField(blank=False)
@@ -24,6 +24,24 @@ class User(AbstractUser):
                                    on_delete=models.SET_NULL,
                                    null=True,
                                    blank=True)
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'email', 'phone_number']
+'''
+
+class User(AbstractUser):
+    SEX_CHOICES = [
+        ('M', 'Male'),
+        ('F', 'Female'),
+    ]
+
+    first_name = models.TextField(blank=False)
+    last_name = models.TextField(blank=False)
+    middle_name = models.CharField(max_length=30, blank=True)
+    sex = models.CharField(max_length=1, choices=SEX_CHOICES, blank=True)
+    email = models.CharField(max_length=100, blank=False, unique=True)
+    phone_number = PhoneNumberField(null=False, blank=False, unique=True, default="")
+    username = models.CharField(max_length=30, blank=False, unique=True)
+    department = models.ForeignKey("api.Department", on_delete=models.SET_NULL, null=True, blank=True)
+
     REQUIRED_FIELDS = ['first_name', 'last_name', 'email', 'phone_number']
 
 
